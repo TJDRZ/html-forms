@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        <section id="sign-in">
+            <div>
+                <p>Already have an Intuit account?</p>
+                <a id="forgot" href="#">I forgot my User ID or Password</a>
+            </div>
+            <button id="sign-in-button" type="button">&#x1F512; Sign In</button>
+        </section>
+        <header>
+            <a id="title-link" href="#">intuit</a>
+            <nav>
+                <ul id="nav-list">
+                    <li>
+                        <img src="./assets/mint.png" alt="Mint Logo">
+                        <a href="#">mint</a>
+                    </li>
+                    <li>
+                        <img src="./assets/qb.png" alt="Quickbooks Logo">
+                        <a href="#">quickbooks</a>
+                    </li>
+                    <li>
+                        <img src="./assets/tt.png" alt="TurboTax Logo">
+                        <a href="#">turbotax</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="form-section">
+            <form action="create-account.html" method=GET>
+                <legend>Create an Intuit Account</legend>
+                <p id="sub-legend">One account for everything Intuit, including Mint.</p>
+                <a id="sub-legend-anchor" href="#">Learn more</a>
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="email">Email address</label>
+                            <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            >
+                        </li>
+                        <li>
+                            <label for="phone">Phone <span id="phone-label-rec">(recommended)</span></label>
+                            <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            >
+                            <span id="sms-warning">Standard call, message, or data rates may apply.</span>
+                        </li>
+                        <li>
+                            <label for="password">Password</label>
+                            <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            pattern="(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            required
+                            >
+                        </li>
+                        <li class="dynamic-pw">
+                            <p id="char-rule" class="pw-rules">Must have at least 8 chars length</p>
+                            <p id="num-rule" class="pw-rules">Must contain at least 1 number</p>
+                            <p id="spec-rule" class="pw-rules">Must contain at least 1 special char (!@#$%^&*)</p>
+                            <p id="case-rule" class="pw-rules">Must contain at least 1 upper and lower case letter</p>
+                        </li>
+                        <li class="dynamic-pw">
+                            <label for="confirm-pw">Confirm password</label>
+                            <input
+                            id="confirm-pw"
+                            name="confirm-pw"
+                            type="password"
+                            required
+                            >
+                        </li>
+                        <li>
+                            <button id="submit" type="submit">&#x1F512; Create Account</button>
+                        </li>
+                    </ul>
+                </fieldset>
+                <p id="account-terms">By selecting Create Account, you agree to our <a href="#">Terms</a> and have read and acknowledge our <a href="#">Global Policy Statement</a></p>
+            </form>
+            <footer>
+                <p id="google-terms">Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.</p>
+            </footer>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>
