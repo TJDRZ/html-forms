@@ -1,14 +1,11 @@
-html,
-body {
-  height: 100%;
-  min-width: 400px;
+/* Global Components */
+html {
   overflow-x: hidden;
+  height: 100%;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,24 +19,34 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: #0077c5;
+  text-decoration: none;
 }
 
 button {
   color: white;
+  cursor: pointer;
+  background-color: #0077c5;
   border: none;
   border-radius: 0.3rem;
-  background-color: #0077c5;
   box-shadow: 0.5px 2px #757575;
 }
 
+#sign-in > div > p,
+header > a,
+li > a,
+form > p,
+#phone-label-rec,
+footer {
+  color: #8d9096;
+}
+
+/* Top Sign-In Component */
 #sign-in {
-  width: 100%;
-  padding: 1rem;
-  height: fit-content;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+  padding: 1rem;
 }
 
 #sign-in > div {
@@ -57,26 +64,18 @@ button {
   margin-left: 1rem;
 }
 
+/* Header/Imgs Nav Above Form Component */
 header {
-  width: 100%;
-  margin: 1rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  margin: 1rem 0rem;
 }
 
 header > a {
   font-size: 2em;
-}
-
-#sign-in > div > p,
-header > a,
-li > a,
-form > p,
-#phone-label-rec,
-footer {
-  color: #8d9096;
 }
 
 #nav-list {
@@ -86,34 +85,33 @@ footer {
 }
 
 #form-section {
-  width: 24rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid #c7c7c7 1px;
+  width: 24rem;
   background-color: white;
+  border: solid #c7c7c7 1px;
 }
 
+/*Form Component */
 form {
-  flex: 1 0;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+  padding: 2rem;
 }
 
 form > * {
   width: 100%;
-  text-align: center;
 }
 
 legend {
   margin-bottom: 1rem;
-  color: #393a3d;
   font-size: 24px;
   font-weight: 400;
+  color: #393a3d;
 }
 
 #sub-legend {
@@ -126,24 +124,24 @@ legend {
 }
 
 fieldset > ul > li {
-  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
+  margin: 2rem 0;
 }
 
 label {
-  color: #404040;
   font-size: 14px;
+  color: #404040;
 }
 
 input {
   width: 100%;
   height: 2rem;
-  border-radius: 0.15rem;
   border: 1px solid #c1c5c8;
+  border-radius: 0.15rem;
 }
 
 #sms-warning {
@@ -153,12 +151,12 @@ input {
 }
 
 .dynamic-pw {
-  display: flex;
+  /* Starts off hidden, changes in JS */
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
-  display: none;
 }
 
 .pw-rules {
